@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Solar System Simulation</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/examples/js/controls/OrbitControls.min.js"></script>
+</head>
+<body>
+  <div id="container"></div>
+  <div id="planet-label"></div>
+  <div id="control-panel">
+    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 8px; gap: 8px; flex-wrap: wrap;">
+      <button id="pause-btn">Pause</button>
+      <button id="theme-toggle">Light Mode</button>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 12px; gap: 8px; flex-wrap: wrap;">
+      <button id="top-view-btn">Top View</button>
+      <button id="side-view-btn">Side View</button>
+    </div>
+    <h2>Orbital Speed Control</h2>
+    <div class="slider-group">
+      <label for="slider-Mercury">Mercury</label>
+      <input type="range" id="slider-Mercury" min="0.001" max="0.1" step="0.001" value="0.04">
+    </div>
+    <div class="slider-group">
+      <label for="slider-Venus">Venus</label>
+      <input type="range" id="slider-Venus" min="0.001" max="0.05" step="0.001" value="0.015">
+    </div>
+    <div class="slider-group">
+      <label for="slider-Earth">Earth</label>
+      <input type="range" id="slider-Earth" min="0.001" max="0.03" step="0.001" value="0.01">
+    </div>
+    <div class="slider-group">
+      <label for="slider-Mars">Mars</label>
+      <input type="range" id="slider-Mars" min="0.001" max="0.02" step="0.001" value="0.008">
+    </div>
+    <div class="slider-group">
+      <label for="slider-Jupiter">Jupiter</label>
+      <input type="range" id="slider-Jupiter" min="0.001" max="0.01" step="0.001" value="0.004">
+    </div>
+    <div class="slider-group">
+      <label for="slider-Saturn">Saturn</label>
+      <input type="range" id="slider-Saturn" min="0.001" max="0.01" step="0.001" value="0.003">
+    </div>
+    <div class="slider-group">
+      <label for="slider-Uranus">Uranus</label>
+      <input type="range" id="slider-Uranus" min="0.001" max="0.01" step="0.001" value="0.002">
+    </div>
+    <div class="slider-group">
+      <label for="slider-Neptune">Neptune</label>
+      <input type="range" id="slider-Neptune" min="0.001" max="0.01" step="0.001" value="0.0015">
+    </div>
+  </div>
+  <div id="planet-label" style="display:none; position:fixed; pointer-events:none; background:rgba(0,0,0,0.8); color:#fff; padding:2px 8px; border-radius:6px; font-size:0.95em; z-index:100;"></div>
+  <script src="script.js"></script>
+</body>
+</html> 
